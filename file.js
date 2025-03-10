@@ -1,9 +1,26 @@
-/* Más adelante vamos a querer validar que nuestros encuestados sean de 18 años de edad mínima y 99 años de edad máxima. 
-Nadie puede cambiar esas definiciones, por lo tanto, vamos a escribirlas en dos constantes (asignándoles los valores numéricos 18 y 99 respectivamente). Por último, deberás pedirle al usuario que ingrese su edad para validarla usando parseInt.
-Desglosando el ejercicio deberás:
-Crea una constante llamada EDAD_MINIMA y otra llamada EDAD_MAXIMA, a las cuales les asignamos los valores numéricos 18 y 99 respectivamente.
-Pide al usuario que ingrese su edad.
-Usa “parseInt” para convertir la entrada del usuario a un número entero.
-Valida si la edad ingresada está dentro del rango permitido y muestra un mensaje adecuado.
-Pista: Las constantes se declaran con la palabra reservada const y es buena práctica que sus nombres sean declarados siempre con letras mayúsculas. Utiliza parseInt para convertir la entrada del usuario a un número entero.
- */
+// Ejercicio 1 
+let edad = 25;  // Puedes cambiar este valor según lo necesites
+let peso = 70;  // Puedes cambiar este valor también
+
+// Ejercicio 2 
+// Pedimos los datos al usuario
+let nombre = prompt("¿Cuál es tu nombre?");
+edad = prompt("¿Cuál es tu edad?");
+peso = prompt("¿Cuál es tu peso?");
+
+// Mensaje personalizado
+alert(`Hola ${nombre}, tienes ${edad} años y tu peso es ${peso} kg.`);
+
+// Ejercicio 3 – Validación de Edad
+const EDAD_MINIMA = 18;
+const EDAD_MAXIMA = 99;
+
+// Solicitamos la edad y la convertimos a número entero
+let edadIngresada = parseInt(prompt("Por favor, ingresa tu edad para validarla:"));
+
+// Validamos si la edad está dentro del rango permitido
+if (edadIngresada >= EDAD_MINIMA && edadIngresada <= EDAD_MAXIMA) {
+    alert("¡Edad válida! Puedes continuar.");
+} else {
+    alert("Edad no válida. Debes tener entre 18 y 99 años.");
+}
